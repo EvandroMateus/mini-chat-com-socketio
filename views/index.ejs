@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocketIO</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        h1{
+            text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+        .msg-box{
+            animation-name: slide;
+            animation-duration: .4s;
+        }
+        @keyframes slide{
+            from{
+                opacity: 0;
+            }
+            to{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body class="font-body bg-gradient-to-r from-green-400 to-blue-500">
+    <h1 class="text-7xl font-bold text-gray-50 text-center my-6">Chatte</h1>
+    <div class="flex justify-center">
+        <div class="w-80 h-96 my-4 shadow-lg bg-gray-100 rounded-xl overflow-hidden flex flex-col">
+            <div class="h-16 px-3 bg-gray-200 border-b-2 border-gray-300 flex items-center">
+                <i class='bx bx-at mr-1'></i>
+                <input value="evandromat" class="pb-1 text-lg leading-3 text-gray-800 placeholder-gray-500 font-medium outline-none bg-transparent" id="username" autocomplete="off" type="text" placeholder="seunome">
+            </div>
+            <div class="h-full p-3 overflow-y-scroll" id="chat"></div>
+            <div class="h-16 px-3 bg-blue-500 flex items-center justify-between">
+                <input class="text-gray-50 placeholder-gray-200 font-medium outline-none bg-transparent" id="msg" type="text" placeholder="Digite sua mensagem...">
+                <i class="bx bx-send text-2xl text-gray-50 cursor-pointer" id="send-btn"></i>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+<script src="js/socketio.js"></script>
+</html>
