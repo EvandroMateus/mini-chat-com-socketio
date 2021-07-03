@@ -12,10 +12,10 @@
             text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
         }
         .msg-box{
-            animation-name: slide;
+            animation-name: fade;
             animation-duration: .4s;
         }
-        @keyframes slide{
+        @keyframes fade{
             from{
                 opacity: 0;
             }
@@ -31,7 +31,7 @@
         <div class="w-80 h-96 my-4 shadow-lg bg-gray-100 rounded-xl overflow-hidden flex flex-col">
             <div class="h-16 px-3 bg-gray-200 border-b-2 border-gray-300 flex items-center">
                 <i class='bx bx-at mr-1'></i>
-                <input value="evandromat" class="pb-1 text-lg leading-3 text-gray-800 placeholder-gray-500 font-medium outline-none bg-transparent" id="username" autocomplete="off" type="text" placeholder="seunome">
+                <input class="pb-1 text-lg leading-3 text-gray-800 placeholder-gray-500 font-medium outline-none bg-transparent" id="username" autocomplete="off" type="text" placeholder="seunome">
             </div>
             <div class="h-full p-3 overflow-y-scroll" id="chat"></div>
             <div class="h-16 px-3 bg-blue-500 flex items-center justify-between">
